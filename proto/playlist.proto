@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "proto";
+
+package playlist;
+
+service PlaylistManager {
+    rpc NewPlaylist (NewPlaylistRequest) returns (NewPlaylistReply) {}
+}
+
+message NewPlaylistRequest {
+    string name = 1;
+}
+
+message NewPlaylistReply {
+    string message = 1;
+}
